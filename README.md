@@ -4,7 +4,7 @@ FXHelper was created to reduce the pain in the butt of repetitive work with FXML
 
 ## Setup:
  include FXHelper 1.0.jar in your project
- [download](https://github.com/truongduykhanh36/FXHelper/tree/master/dist)
+ [download](https://github.com/khanhtd36/FXHelper/tree/master/dist)
  
 ## Usage:
  - To create a window and open it
