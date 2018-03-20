@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="FXHelper:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FXHelper_jar</output-path>
+    <root id="archive" name="FXHelper.jar">
+      <element id="module-output" name="FXHelper" />
+    </root>
+  </artifact>
+</component>
