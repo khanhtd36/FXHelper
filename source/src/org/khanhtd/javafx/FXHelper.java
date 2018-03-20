@@ -188,6 +188,11 @@ public class FXHelper {
 			return this;
 		}
 		
+		public OpenWindowTask onShown(WindowShownCallback onShown) {
+			this.onShown = onShown;
+			return this;
+		}
+		
 		public void open() {
 			createWindowTask.create();
 		}
