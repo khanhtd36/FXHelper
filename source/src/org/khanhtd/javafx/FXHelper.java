@@ -18,6 +18,8 @@ public class FXHelper {
 		}
 	}
 	
+	private FXHelper() {}
+	
 	public static void setupFX() {
 		PlatformImpl.startup(() -> {
 		});
@@ -41,28 +43,52 @@ public class FXHelper {
 		}
 	}
 	
+	public static boolean isFXThread() {
+		try {
+			return Platform.isFxApplicationThread();
+		}
+		catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	public static FXMLLoadTask loadFXML(URL xmlFile) {
+		return new FXMLLoadTask(xmlFile, false);
+	}
+	
+	public static CreateWindowTask createWindow(URL fxmlFile) {
+		return new CreateWindowTask(fxmlFile, false);
+	}
+	
+	public static OpenWindowTask openWindow(URL fxmlFile) {
+		return new OpenWindowTask(fxmlFile, false);
+	}
+	
 	public static FXMLLoadTask loadFXMLAsync(URL xmlFile) {
-		return new FXMLLoadTask(xmlFile);
+		return new FXMLLoadTask(xmlFile, true);
 	}
 	
 	public static CreateWindowTask createWindowAsync(URL fxmlFile) {
-		return new CreateWindowTask(fxmlFile);
+		return new CreateWindowTask(fxmlFile, true);
 	}
 	
 	public static OpenWindowTask openWindowAsync(URL fxmlFile) {
-		return new OpenWindowTask(fxmlFile);
+		return new OpenWindowTask(fxmlFile, true);
 	}
 	
 	
 	public static class FXMLLoadTask {
+		private boolean async;
 		private URL fxmlFile;
 		private Parent root = null;
 		private Object controller = null;
 		private FXMLLoadedCallback onLoaded = null;
 		private FXTaskFailedCallback onFailed = null;
 		
-		FXMLLoadTask(URL fxmlFile) {
+		FXMLLoadTask(URL fxmlFile, boolean async) {
 			this.fxmlFile = fxmlFile;
+			this.async = async;
 		}
 		
 		public FXMLLoadTask withController(Object controller) {
@@ -81,34 +107,47 @@ public class FXHelper {
 		}
 		
 		public void load() {
-			new Thread(() -> {
-				try {
-					FXMLLoader loader = new FXMLLoader(fxmlFile);
-					if (controller != null) loader.setController(controller);
-					
-					root = loader.load();
-					controller = loader.getController();
-					
-					if (onLoaded != null) onLoaded.onLoaded(root, controller);
-				} catch (Exception e) {
-					if (onFailed != null) onFailed.onFailed(e);
-				}
-			}).start();
+			if (async) {
+				new Thread(this::startLoad).start();
+			}
+			else {
+				startLoad();
+			}
+		}
+		
+		private void startLoad() {
+			try {
+				FXMLLoader loader = new FXMLLoader(fxmlFile);
+				if (controller != null) loader.setController(controller);
+				
+				root = loader.load();
+				controller = loader.getController();
+				
+				if (onLoaded != null) onLoaded.onLoaded(root, controller);
+			} catch (Exception e) {
+				if (onFailed != null) onFailed.onFailed(e);
+			}
 		}
 	}
 	
 	public static class CreateWindowTask {
 		private FXMLLoadTask fxmlLoadTask;
+		private Stage stage = null;
 		private FXTaskFailedCallback onFailed = null;
 		private CreateWindowDoneCallback onDone = null;
 		
-		CreateWindowTask(URL fxmlFile) {
-			fxmlLoadTask = new FXMLLoadTask(fxmlFile);
-			fxmlLoadTask.onLoaded((root, controller) -> doOnFxmlLoaded(root, controller));
+		CreateWindowTask(URL fxmlFile, boolean async) {
+			fxmlLoadTask = new FXMLLoadTask(fxmlFile, async);
+			fxmlLoadTask.onLoaded(this::doOnFxmlLoaded);
 		}
 		
 		public CreateWindowTask withController(Object controller) {
 			fxmlLoadTask.withController(controller);
+			return this;
+		}
+		
+		public CreateWindowTask withStage(Stage stage) {
+			this.stage = stage;
 			return this;
 		}
 		
@@ -136,12 +175,14 @@ public class FXHelper {
 			fxmlLoadTask.load();
 		}
 		
-		protected void doOnFxmlLoaded(Parent root, Object controller) {
+		private void doOnFxmlLoaded(Parent root, Object controller) {
 			Scene scene = new Scene(root);
 			
 			Platform.runLater(() -> {
 				try {
-					Stage stage = new Stage();
+					if (stage == null) {
+						stage = new Stage();
+					}
 					stage.setScene(scene);
 					
 					if (onDone != null) onDone.onDone(stage, scene, controller);
@@ -157,13 +198,18 @@ public class FXHelper {
 		private FXTaskFailedCallback onFailed = null;
 		private WindowShownCallback onShown = null;
 		
-		OpenWindowTask(URL fxmlFile) {
-			createWindowTask = new CreateWindowTask(fxmlFile);
-			createWindowTask.onDone((stage, scene, controller) -> doOnCreateWindowDone(stage, scene, controller));
+		OpenWindowTask(URL fxmlFile, boolean async) {
+			createWindowTask = new CreateWindowTask(fxmlFile, async);
+			createWindowTask.onDone(this::doOnCreateWindowDone);
 		}
 		
 		public OpenWindowTask withController(Object controller) {
 			createWindowTask.withController(controller);
+			return this;
+		}
+		
+		public OpenWindowTask withStage(Stage stage) {
+			createWindowTask.stage = stage;
 			return this;
 		}
 		
@@ -197,7 +243,7 @@ public class FXHelper {
 			createWindowTask.create();
 		}
 		
-		protected void doOnCreateWindowDone(Stage stage, Scene scene, Object controller) {
+		private void doOnCreateWindowDone(Stage stage, Scene scene, Object controller) {
 			try {
 				stage.show();
 				if (onShown != null) onShown.onShown();
@@ -224,5 +270,3 @@ public class FXHelper {
 		void onShown();
 	}
 }
-
-
