@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.khanhtd.javafx.controller.StageSceneController;
 
 import java.net.URL;
 
@@ -17,8 +18,6 @@ public class FXHelper {
 		
 		}
 	}
-	
-	private FXHelper() {}
 	
 	public static void setupFX() {
 		PlatformImpl.startup(() -> {
@@ -46,8 +45,7 @@ public class FXHelper {
 	public static boolean isFXThread() {
 		try {
 			return Platform.isFxApplicationThread();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			return false;
 		}
 	}
@@ -109,8 +107,7 @@ public class FXHelper {
 		public void load() {
 			if (async) {
 				new Thread(this::startLoad).start();
-			}
-			else {
+			} else {
 				startLoad();
 			}
 		}
@@ -178,18 +175,29 @@ public class FXHelper {
 		private void doOnFxmlLoaded(Parent root, Object controller) {
 			Scene scene = new Scene(root);
 			
-			Platform.runLater(() -> {
-				try {
-					if (stage == null) {
-						stage = new Stage();
-					}
-					stage.setScene(scene);
-					
-					if (onDone != null) onDone.onDone(stage, scene, controller);
-				} catch (Exception e) {
-					if (onFailed != null) onFailed.onFailed(e);
+			if (isFXThread()) {
+				createStage(scene, controller);
+			} else {
+				Platform.runLater(() -> createStage(scene, controller));
+			}
+		}
+		
+		private void createStage(Scene scene, Object controller) {
+			try {
+				if (stage == null) {
+					stage = new Stage();
 				}
-			});
+				stage.setScene(scene);
+				
+				if (controller instanceof StageSceneController) {
+					((StageSceneController)controller).setScene(scene);
+					((StageSceneController)controller).setStage(stage);
+				}
+				
+				if (onDone != null) onDone.onDone(stage, scene, controller);
+			} catch (Exception e) {
+				if (onFailed != null) onFailed.onFailed(e);
+			}
 		}
 	}
 	
@@ -268,5 +276,8 @@ public class FXHelper {
 	
 	public interface WindowShownCallback {
 		void onShown();
+	}
+	
+	private FXHelper() {
 	}
 }

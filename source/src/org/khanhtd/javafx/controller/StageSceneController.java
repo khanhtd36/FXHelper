@@ -11,17 +11,15 @@ public abstract class StageSceneController {
 		return stage;
 	}
 	
-	public StageSceneController setStage(Stage stage) {
+	public void setStage(Stage stage) {
 		this.stage = stage;
-		return this;
 	}
 	
 	public Scene getScene() {
 		return scene;
 	}
 	
-	public StageSceneController setScene(Scene scene) {
+	public void setScene(Scene scene) {
 		this.scene = scene;
-		return this;
 	}
 }
