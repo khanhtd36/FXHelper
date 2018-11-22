@@ -3,7 +3,7 @@
 FXHelper was created to reduce the pain in the butt of repetitive work with FXMLLoader, FXThread.
 
 ## Setup:
- include FXHelper 1.0.jar in your project
+ include FXHelper 2.0.jar in your project
  [download](https://github.com/truongduykhanh36/FXHelper/tree/master/dist)
  
 ## Usage:
