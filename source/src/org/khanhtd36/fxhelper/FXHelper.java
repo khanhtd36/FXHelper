@@ -1,11 +1,11 @@
-package org.khanhtd.javafx;
+package org.khanhtd36.fxhelper;
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.khanhtd.javafx.controller.StageSceneController;
+import org.khanhtd36.fxhelper.controller.StageSceneController;
 
 import java.net.URL;
 

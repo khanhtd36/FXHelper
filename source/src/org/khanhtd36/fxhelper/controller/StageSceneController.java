@@ -1,4 +1,4 @@
-package org.khanhtd.javafx.controller;
+package org.khanhtd36.fxhelper.controller;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;

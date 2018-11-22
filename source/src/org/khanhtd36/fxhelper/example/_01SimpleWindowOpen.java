@@ -1,12 +1,12 @@
-package org.khanhtd.javafx.example;
+package org.khanhtd36.fxhelper.example;
 
-import org.khanhtd.javafx.FXHelper;
+import org.khanhtd36.fxhelper.FXHelper;
 
 public class _01SimpleWindowOpen {
     public static void main(String[] args) {
         FXHelper.openWindowAsync(
                 _01SimpleWindowOpen.class.getResource(
-                        "/views/main_window.fxml"
+                        "/org/khanhtd36/fxhelper/views/main_window.fxml"
                 )
         ).open();
     }

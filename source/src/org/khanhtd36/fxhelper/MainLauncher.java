@@ -1,4 +1,4 @@
-package org.khanhtd.javafx;
+package org.khanhtd36.fxhelper;
 
 
 class MainLauncher {
