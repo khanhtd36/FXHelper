@@ -9,7 +9,7 @@ import org.khanhtd.javafx.controller.StageSceneController;
 
 import java.net.URL;
 
-public class FXHelper {
+public final class FXHelper {
     static {
         try {
             setupFX();
