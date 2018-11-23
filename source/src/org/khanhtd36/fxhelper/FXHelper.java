@@ -1,50 +1,42 @@
-package org.khanhtd.javafx;
+package org.khanhtd36.fxhelper;
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.khanhtd.javafx.controller.StageSceneController;
+import org.khanhtd36.fxhelper.controller.StageSceneController;
 
 import java.net.URL;
 
-public class FXHelper {
+@SuppressWarnings("ALL")
+public final class FXHelper {
     static {
-        try {
-            setupFX();
-        } catch (Exception ignore) {
-        
-        }
+        setupFX();
     }
     
     public static void setupFX() {
-        Platform.startup(() -> {
-        });
+        try {
+            Platform.startup(() -> {});
+        } catch (Throwable ignore) {}
     }
     
     public static void destroyFX() {
         try {
             Platform.exit();
-        } catch (Exception e) {
-            System.err.println("FXHelper: error destroyFX");
-            e.printStackTrace();
-        }
+        } catch (Throwable ignore) {}
     }
     
     public static void setImplicitExit(boolean implicitExit) {
         try {
             Platform.setImplicitExit(implicitExit);
-        } catch (Exception e) {
-            System.err.println("FXHelper: error set implicit Exit");
-            e.printStackTrace();
-        }
+        } catch (Throwable ignore) {}
     }
     
     public static boolean isFXThread() {
         try {
             return Platform.isFxApplicationThread();
-        } catch (Exception e) {
+        } catch (Throwable ignore) {
             return false;
         }
     }
@@ -119,7 +111,13 @@ public class FXHelper {
                 root = loader.load();
                 controller = loader.getController();
                 
-                if (onLoaded != null) onLoaded.onLoaded(root, controller);
+                if (onLoaded != null) {
+                    if (FXHelper.isFXThread()) {
+                        onLoaded.onLoaded(root, controller);
+                    } else {
+                        Platform.runLater(() -> onLoaded.onLoaded(root, controller));
+                    }
+                }
             } catch (Exception e) {
                 if (onFailed != null) onFailed.onFailed(e);
             }
