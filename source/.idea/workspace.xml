@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fix &quot;not on FXThread&quot; in loadFXML function">
-      <change beforePath="$PROJECT_DIR$/../dist/fxhelper-2.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/fxhelper-2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/fxhelper_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/FXHelper 2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FXHelper_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/FXHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/FXHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/controller/StageSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/controller/StageSceneController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,84 +60,72 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="26202255">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="6" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="31" />
-          <entry key="fxml" value="1" />
-          <entry key="java" value="162" />
-          <entry key="txt" value="144" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="162" />
-          <entry key="PLAIN_TEXT" value="175" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="fxml" value="1" />
-          <entry key="java" value="14" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="14" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/FXHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="186" column="38" lean-forward="true" selection-start-line="186" selection-start-column="38" selection-end-line="186" selection-end-column="38" />
+            <state relative-caret-position="832">
+              <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#268#292#0" expanded="true" />
                 <element signature="initializer##0;class#FXHelper#0" />
                 <element signature="method#setupFX#0;class#FXHelper#0" />
+                <element signature="e#413#464#0" />
                 <element signature="method#destroyFX#0;class#FXHelper#0" />
+                <element signature="e#553#593#0" />
                 <element signature="method#setImplicitExit#0;class#FXHelper#0" />
+                <element signature="e#708#771#0" />
                 <element signature="method#isFXThread#0;class#FXHelper#0" />
+                <element signature="e#864#928#0" />
+                <element signature="e#954#991#0" />
                 <element signature="class#FXMLLoadTask#0;class#FXHelper#0" />
                 <element signature="method#FXMLLoadTask#0;class#FXMLLoadTask#0;class#FXHelper#0" />
                 <element signature="method#withController#0;class#FXMLLoadTask#0;class#FXHelper#0" />
                 <element signature="method#onLoaded#0;class#FXMLLoadTask#0;class#FXHelper#0" />
-                <element signature="method#onFailed#0;class#FXMLLoadTask#0;class#FXHelper#0" />
+                <element signature="method#onError#0;class#FXMLLoadTask#0;class#FXHelper#0" />
                 <element signature="method#load#0;class#FXMLLoadTask#0;class#FXHelper#0" />
+                <element signature="e#2694#2762#1" />
+                <element signature="e#2768#2812#1" />
                 <element signature="method#startLoad#0;class#FXMLLoadTask#0;class#FXHelper#0" />
+                <element signature="e#2883#3464#0" />
+                <element signature="e#3184#3450#1" />
+                <element signature="e#3233#3317#1" />
+                <element signature="e#3323#3432#1" />
+                <element signature="e#3485#3557#0" />
+                <element signature="class#CreateWindowTask#0;class#FXHelper#0" />
                 <element signature="method#CreateWindowTask#0;class#CreateWindowTask#0;class#FXHelper#0" />
                 <element signature="method#withController#0;class#CreateWindowTask#0;class#FXHelper#0" />
                 <element signature="method#withStage#0;class#CreateWindowTask#0;class#FXHelper#0" />
-                <element signature="method#onFailed#0;class#CreateWindowTask#0;class#FXHelper#0" />
+                <element signature="method#onLoaded#0;class#CreateWindowTask#0;class#FXHelper#0" />
+                <element signature="e#4417#4579#0" />
+                <element signature="method#onError#0;class#CreateWindowTask#0;class#FXHelper#0" />
                 <element signature="method#onDone#0;class#CreateWindowTask#0;class#FXHelper#0" />
+                <element signature="method#doOnFxmlLoaded#0;class#CreateWindowTask#0;class#FXHelper#0" />
+                <element signature="e#5228#5291#1" />
+                <element signature="e#5297#5385#1" />
+                <element signature="method#createStage#0;class#CreateWindowTask#0;class#FXHelper#0" />
+                <element signature="e#5488#5979#0" />
+                <element signature="e#5525#5585#1" />
+                <element signature="e#5706#5871#1" />
+                <element signature="e#6000#6072#0" />
+                <element signature="class#OpenWindowTask#0;class#FXHelper#0" />
+                <element signature="method#OpenWindowTask#0;class#OpenWindowTask#0;class#FXHelper#0" />
                 <element signature="method#withController#0;class#OpenWindowTask#0;class#FXHelper#0" />
                 <element signature="method#withStage#0;class#OpenWindowTask#0;class#FXHelper#0" />
                 <element signature="method#onLoaded#0;class#OpenWindowTask#0;class#FXHelper#0" />
-                <element signature="method#onFailed#0;class#OpenWindowTask#0;class#FXHelper#0" />
+                <element signature="method#onError#0;class#OpenWindowTask#0;class#FXHelper#0" />
                 <element signature="method#onDone#0;class#OpenWindowTask#0;class#FXHelper#0" />
+                <element signature="e#7291#7525#0" />
+                <element signature="e#7361#7511#1" />
                 <element signature="method#onShown#0;class#OpenWindowTask#0;class#FXHelper#0" />
                 <element signature="method#doOnCreateWindowDone#0;class#OpenWindowTask#0;class#FXHelper#0" />
+                <element signature="e#7913#8014#0" />
+                <element signature="e#8035#8107#0" />
                 <element signature="class#FXMLLoadedCallback#0;class#FXHelper#0" />
-                <element signature="class#FXTaskFailedCallback#0;class#FXHelper#0" />
+                <element signature="class#FXTaskErrorCallback#0;class#FXHelper#0" />
                 <element signature="class#CreateWindowDoneCallback#0;class#FXHelper#0" />
                 <element signature="class#WindowShownCallback#0;class#FXHelper#0" />
                 <element signature="method#FXHelper#0;class#FXHelper#0" />
@@ -148,13 +142,18 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>main</find>
+      <find>onFailed</find>
     </findStrings>
+    <replaceStrings>
+      <replace>onError</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -167,10 +166,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/khanhtd/javafx/example/SimpleInspectWindow.java" />
-        <option value="$PROJECT_DIR$/src/org/khanhtd/javafx/example/_01SimpleWindowOpen.java" />
         <option value="$PROJECT_DIR$/src/org/khanhtd36/javafx/example/_01SimpleWindowOpen.java" />
         <option value="$PROJECT_DIR$/res/org/khanhtd36/fxhelper/views/main_window.fxml" />
+        <option value="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/controller/StageSceneController.java" />
+        <option value="$PROJECT_DIR$/src/module-info.java" />
         <option value="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/example/_01SimpleWindowOpen.java" />
         <option value="$PROJECT_DIR$/src/org/khanhtd36/fxhelper/FXHelper.java" />
       </list>
@@ -200,7 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -208,11 +206,6 @@
             <path>
               <item name="source" type="b2602c69:ProjectViewProjectNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="source" type="b2602c69:ProjectViewProjectNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="source" type="b2602c69:ProjectViewProjectNode" />
@@ -225,10 +218,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fxhelper" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fxhelper" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,10 +242,10 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542873464398" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543042722677" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -255,6 +256,11 @@
       <recent name="$PROJECT_DIR$/res/org.khanhtd.fx/views" />
       <recent name="$PROJECT_DIR$/src/org/khanhtd/fx/example" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="cmd" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -268,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application._01SimpleWindowOpen">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -281,7 +287,7 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -331,7 +337,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -342,11 +348,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -408,16 +414,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542976915928</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix &quot;not on FXThread&quot; in loadFXML function">
+      <created>1542988746453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542988746453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="21664000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20104167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20058565" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -426,7 +440,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32809225" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32659408" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,9 +450,9 @@
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Profiler" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32914045" />
-      <window_info anchor="bottom" id="Event Log" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="12" weight="0.32866043" />
       <window_info anchor="bottom" id="Changes" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32809225" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32659408" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -450,15 +464,15 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Maven" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="auto set Stage, Scene for Controller that is instanceof StageSceneController.&#10;fxThread checking." />
     <MESSAGE value="update example, make stage/scene protected" />
@@ -467,86 +481,97 @@
     <MESSAGE value="fix &quot;not on FXThread&quot; in loadFXML function" />
     <option name="LAST_COMMIT_MESSAGE" value="fix &quot;not on FXThread&quot; in loadFXML function" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/FXHelper.java</url>
-          <line>175</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/views/main_window.fxml" />
-    <entry file="file://$PROJECT_DIR$/res/org/khanhtd36/fxhelper/views/main_window.fxml">
+    <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/LibInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/controller/StageSceneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="130">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#99#123#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module-info.java" />
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/example/_01SimpleWindowOpen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/controller/StageSceneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/LibInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/khanhtd36/fxhelper/FXHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="186" column="38" lean-forward="true" selection-start-line="186" selection-start-column="38" selection-end-line="186" selection-end-column="38" />
+        <state relative-caret-position="832">
+          <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#268#292#0" expanded="true" />
             <element signature="initializer##0;class#FXHelper#0" />
             <element signature="method#setupFX#0;class#FXHelper#0" />
+            <element signature="e#413#464#0" />
             <element signature="method#destroyFX#0;class#FXHelper#0" />
+            <element signature="e#553#593#0" />
             <element signature="method#setImplicitExit#0;class#FXHelper#0" />
+            <element signature="e#708#771#0" />
             <element signature="method#isFXThread#0;class#FXHelper#0" />
+            <element signature="e#864#928#0" />
+            <element signature="e#954#991#0" />
             <element signature="class#FXMLLoadTask#0;class#FXHelper#0" />
             <element signature="method#FXMLLoadTask#0;class#FXMLLoadTask#0;class#FXHelper#0" />
             <element signature="method#withController#0;class#FXMLLoadTask#0;class#FXHelper#0" />
             <element signature="method#onLoaded#0;class#FXMLLoadTask#0;class#FXHelper#0" />
-            <element signature="method#onFailed#0;class#FXMLLoadTask#0;class#FXHelper#0" />
+            <element signature="method#onError#0;class#FXMLLoadTask#0;class#FXHelper#0" />
             <element signature="method#load#0;class#FXMLLoadTask#0;class#FXHelper#0" />
+            <element signature="e#2694#2762#1" />
+            <element signature="e#2768#2812#1" />
             <element signature="method#startLoad#0;class#FXMLLoadTask#0;class#FXHelper#0" />
+            <element signature="e#2883#3464#0" />
+            <element signature="e#3184#3450#1" />
+            <element signature="e#3233#3317#1" />
+            <element signature="e#3323#3432#1" />
+            <element signature="e#3485#3557#0" />
+            <element signature="class#CreateWindowTask#0;class#FXHelper#0" />
             <element signature="method#CreateWindowTask#0;class#CreateWindowTask#0;class#FXHelper#0" />
             <element signature="method#withController#0;class#CreateWindowTask#0;class#FXHelper#0" />
             <element signature="method#withStage#0;class#CreateWindowTask#0;class#FXHelper#0" />
-            <element signature="method#onFailed#0;class#CreateWindowTask#0;class#FXHelper#0" />
+            <element signature="method#onLoaded#0;class#CreateWindowTask#0;class#FXHelper#0" />
+            <element signature="e#4417#4579#0" />
+            <element signature="method#onError#0;class#CreateWindowTask#0;class#FXHelper#0" />
             <element signature="method#onDone#0;class#CreateWindowTask#0;class#FXHelper#0" />
+            <element signature="method#doOnFxmlLoaded#0;class#CreateWindowTask#0;class#FXHelper#0" />
+            <element signature="e#5228#5291#1" />
+            <element signature="e#5297#5385#1" />
+            <element signature="method#createStage#0;class#CreateWindowTask#0;class#FXHelper#0" />
+            <element signature="e#5488#5979#0" />
+            <element signature="e#5525#5585#1" />
+            <element signature="e#5706#5871#1" />
+            <element signature="e#6000#6072#0" />
+            <element signature="class#OpenWindowTask#0;class#FXHelper#0" />
+            <element signature="method#OpenWindowTask#0;class#OpenWindowTask#0;class#FXHelper#0" />
             <element signature="method#withController#0;class#OpenWindowTask#0;class#FXHelper#0" />
             <element signature="method#withStage#0;class#OpenWindowTask#0;class#FXHelper#0" />
             <element signature="method#onLoaded#0;class#OpenWindowTask#0;class#FXHelper#0" />
-            <element signature="method#onFailed#0;class#OpenWindowTask#0;class#FXHelper#0" />
+            <element signature="method#onError#0;class#OpenWindowTask#0;class#FXHelper#0" />
             <element signature="method#onDone#0;class#OpenWindowTask#0;class#FXHelper#0" />
+            <element signature="e#7291#7525#0" />
+            <element signature="e#7361#7511#1" />
             <element signature="method#onShown#0;class#OpenWindowTask#0;class#FXHelper#0" />
             <element signature="method#doOnCreateWindowDone#0;class#OpenWindowTask#0;class#FXHelper#0" />
+            <element signature="e#7913#8014#0" />
+            <element signature="e#8035#8107#0" />
             <element signature="class#FXMLLoadedCallback#0;class#FXHelper#0" />
-            <element signature="class#FXTaskFailedCallback#0;class#FXHelper#0" />
+            <element signature="class#FXTaskErrorCallback#0;class#FXHelper#0" />
             <element signature="class#CreateWindowDoneCallback#0;class#FXHelper#0" />
             <element signature="class#WindowShownCallback#0;class#FXHelper#0" />
             <element signature="method#FXHelper#0;class#FXHelper#0" />
@@ -560,11 +585,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>FXHelper:jar</last-edited>
+          <last-edited>fxhelper:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -595,7 +621,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

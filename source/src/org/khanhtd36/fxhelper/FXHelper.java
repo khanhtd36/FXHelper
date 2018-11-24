@@ -73,7 +73,7 @@ public final class FXHelper {
         private Parent root = null;
         private Object controller = null;
         private FXMLLoadedCallback onLoaded = null;
-        private FXTaskFailedCallback onFailed = null;
+        private FXTaskErrorCallback onError = null;
         
         FXMLLoadTask(URL fxmlFile, boolean async) {
             this.fxmlFile = fxmlFile;
@@ -90,8 +90,8 @@ public final class FXHelper {
             return this;
         }
         
-        public FXMLLoadTask onFailed(FXTaskFailedCallback callback) {
-            this.onFailed = callback;
+        public FXMLLoadTask onError(FXTaskErrorCallback callback) {
+            this.onError = callback;
             return this;
         }
         
@@ -119,7 +119,7 @@ public final class FXHelper {
                     }
                 }
             } catch (Exception e) {
-                if (onFailed != null) onFailed.onFailed(e);
+                if (onError != null) onError.onError(e);
             }
         }
     }
@@ -127,7 +127,7 @@ public final class FXHelper {
     public static class CreateWindowTask {
         private FXMLLoadTask fxmlLoadTask;
         private Stage stage = null;
-        private FXTaskFailedCallback onFailed = null;
+        private FXTaskErrorCallback onError = null;
         private CreateWindowDoneCallback onDone = null;
         
         CreateWindowTask(URL fxmlFile, boolean async) {
@@ -154,9 +154,9 @@ public final class FXHelper {
             return this;
         }
         
-        public CreateWindowTask onFailed(FXTaskFailedCallback callback) {
-            fxmlLoadTask.onFailed(callback);
-            this.onFailed = callback;
+        public CreateWindowTask onError(FXTaskErrorCallback callback) {
+            fxmlLoadTask.onError(callback);
+            this.onError = callback;
             return this;
         }
         
@@ -193,14 +193,14 @@ public final class FXHelper {
                 
                 if (onDone != null) onDone.onDone(stage, scene, controller);
             } catch (Exception e) {
-                if (onFailed != null) onFailed.onFailed(e);
+                if (onError != null) onError.onError(e);
             }
         }
     }
     
     public static class OpenWindowTask {
         private CreateWindowTask createWindowTask;
-        private FXTaskFailedCallback onFailed = null;
+        private FXTaskErrorCallback onError = null;
         private WindowShownCallback onShown = null;
         
         OpenWindowTask(URL fxmlFile, boolean async) {
@@ -223,9 +223,9 @@ public final class FXHelper {
             return this;
         }
         
-        public OpenWindowTask onFailed(FXTaskFailedCallback callback) {
-            createWindowTask.onFailed(callback);
-            this.onFailed = callback;
+        public OpenWindowTask onError(FXTaskErrorCallback callback) {
+            createWindowTask.onError(callback);
+            this.onError = callback;
             return this;
         }
         
@@ -251,9 +251,9 @@ public final class FXHelper {
         private void doOnCreateWindowDone(Stage stage, Scene scene, Object controller) {
             try {
                 stage.show();
-                if (onShown != null) onShown.onShown();
+                if (onShown != null) onShown.onShown(stage, scene, controller);
             } catch (Exception e) {
-                if (onFailed != null) onFailed.onFailed(e);
+                if (onError != null) onError.onError(e);
             }
         }
     }
@@ -263,8 +263,8 @@ public final class FXHelper {
         void onLoaded(Parent root, Object controller);
     }
     
-    public interface FXTaskFailedCallback {
-        void onFailed(Exception e);
+    public interface FXTaskErrorCallback {
+        void onError(Exception e);
     }
     
     public interface CreateWindowDoneCallback {
@@ -272,7 +272,7 @@ public final class FXHelper {
     }
     
     public interface WindowShownCallback {
-        void onShown();
+        void onShown(Stage stage, Scene scene, Object controller);
     }
     
     private FXHelper() {

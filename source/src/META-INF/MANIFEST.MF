@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: MainLauncher
+Main-Class: org.khanhtd36.fxhelper.LibInfo
 
